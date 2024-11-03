@@ -1,0 +1,209 @@
+/* Estilo para el header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+#navbar .nav li a {
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 20px;
+}
+
+/* Estilos para la sección de recetas */
+.platos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.platos h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #343a40;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  color: #495057;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.card-text small {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+
+  .mapa {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #navbar .nav li a {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .platos {
+    grid-template-columns: 1fr;
+  }
+
+  .platos h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Estilo para la sección del mapa */
+.mapa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: #eef2f5;
+  text-align: center;
+}
+
+.mapita {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  margin: 10px;
+}
+
+.lugares {
+  margin-top: 20px;
+}
+
+.lugares .ubis {
+  margin: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.redesfooter a img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.recetasaladas p {
+  margin: 20px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.menufooter {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu {
+  margin: 0 10px;
+}
+
+.menu-link {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #f1f1f1;
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #343434;
+  background-color: #000000;
+}
+
+.copy small {
+  font-weight: 300;
+}
+
+.otroslocales {
+  margin: 20px;
+}
+
+.otroslocales .lugares {
+  list-style: none;
+}
