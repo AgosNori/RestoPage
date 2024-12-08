@@ -2,16 +2,88 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 10px 20px;
   flex-wrap: wrap;
-  padding: 10px;
+  background-color: #fff; /* Opcional: fondo para mejor visibilidad */
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+#navbar .nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar .nav li {
+  margin: 0 10px;
 }
 
 #navbar .nav li a {
   color: black;
   text-decoration: none;
-  margin: 10px;
   font-size: 20px;
+}
+
+.redes a img {
+  width: 24px;
+  margin: 0 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.redes a img:hover {
+  transform: scale(1.1);
+}
+
+/* --- Responsive para tablets y móviles --- */
+
+/* Pantallas menores a 768px (tablets y móviles) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo img {
+    max-width: 120px;
+  }
+
+  #navbar .nav {
+    flex-direction: column;
+  }
+
+  #navbar .nav li {
+    margin: 5px 0;
+  }
+
+  #navbar .nav li a {
+    font-size: 18px;
+  }
+
+  .redes {
+    margin-top: 10px;
+  }
+}
+
+/* Pantallas menores a 480px (móviles pequeños) */
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 100px;
+  }
+
+  #navbar .nav li a {
+    font-size: 16px;
+  }
+
+  .redes a img {
+    width: 20px;
+  }
 }
 
 /* Estilos para la sección de recetas */
@@ -134,12 +206,14 @@ header {
 
 .lugares {
   margin-top: 20px;
+  list-style: none;
 }
 
 .lugares .ubis {
   margin: 10px;
   color: black;
   text-decoration: none;
+ 
 }
 
 /* Estilo para el footer */
@@ -148,6 +222,7 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+  margin: 0; /* Asegura que no haya margen adicional */
 }
 
 .redesfooter a img {
@@ -184,26 +259,29 @@ footer {
   text-decoration: underline;
 }
 
+/* Estilo base para el copyright */
 .copy {
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  font-size: 0.875rem;
-  color: #f1f1f1;
-  margin-top: 20px;
-  padding: 10px;
-  border-top: 1px solid #343434;
-  background-color: #000000;
+  width: 100%; /* Se extiende completamente */
+  margin: 0; /* Elimina márgenes extra */
+  padding: 10px 0; /* Espaciado vertical */
+  text-align: center; /* Centra el texto */
+  font-size: 0.875rem; /* Tamaño de fuente base */
+  color: #f1f1f1; /* Color del texto */
+  border-top: 1px solid #343434; /* Borde superior */
+
 }
 
-.copy small {
-  font-weight: 300;
+/* Responsividad */
+@media (max-width: 768px) {
+  .copy {
+    font-size: 0.8rem; /* Reduce el tamaño del texto */
+    padding: 8px 0; /* Menor espaciado vertical */
+  }
 }
 
-.otroslocales {
-  margin: 20px;
-}
-
-.otroslocales .lugares {
-  list-style: none;
+@media (max-width: 480px) {
+  .copy {
+    font-size: 0.75rem; /* Texto más pequeño */
+    padding: 6px 0; /* Espaciado aún más reducido */
+  }
 }
